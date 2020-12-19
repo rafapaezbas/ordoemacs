@@ -9,7 +9,7 @@ Basically Ordoemacs is able to do two things:
 * Is able to check if someone is actually in front of the computer, if not, the program will drop into a screen-saver until the owner logs in again.
 
 What a fantastic idea! The concept is so well explained and original that is it makes de reader imagination fly. The author already saw the potencial of a camera attached to a computer for user indetification. Now, this part of the plot is based on the year 1997, 23 years later face recognition would also be totally posible!
-## Creating an Emacs minor mode for simuting Ordoemacs.
+## Creating an Emacs minor mode for simulating Ordoemacs.
 The flexibility of Emacs, allows to create a minor-mode (an optional mode that alters the functionality of Emacs) binded to a file extension, in this case ".ordo".
 This minor mode will work for the first point mentioned before, with the help of [Gnu Privacy Guard](https://gnupg.org/), it will encrypt and decrypt files only storing the plain content in RAM. Also, it will use an usb storage for saving the encryption key.
 ### Installation:
@@ -69,7 +69,7 @@ openssl rand -base64 16 >> /media/usb-drive/passphrase.txt
               (disable-ordoemacs-mode))))
 ```
 #### What is /dev/shm?
-`/dev/shm` is a temporary that uses RAM normally functioning as a shared memory space for inter process communication.
+`/dev/shm` is a temporary folder that uses RAM normally functioning as a shared memory space for inter process communication.
 ### Usage
 Create a file with extension ".ordo". After save, the `encrypt`  function will execute, encrypting the file using `/dev/shm` and storing the content in the buffer file location. In order to use it, the usb-storage must be mounted.
 ## Some conclusions.
